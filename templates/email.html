@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>send your email</title>
+	<style type="text/css">
+head{
+	background-color: yellow;
+}
+/*div {
+	background-color: yellow;
+}*/
+body {
+	background-image: url("http://hd.wallpaperswide.com/thumbs/mail-t2.jpg") ;
+	background-repeat: no-repeat;
+    /*background-position: right top;*/
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; 
+
+}
+</style>
+</head>
+<body>
+<div>
+	<br><br><br><br><br><br><br><br><br><br>
+</div>
+	<center>
+		<div class="body">
+	<script type="text/javascript">
+	function yes1check() {
+    if (document.getElementById('yescheck').checked) {
+        document.getElementById('ifyes').style.display = 'block';
+    }
+    else document.getElementById('ifyes').style.display = 'none';
+}
+function no1check() {
+    if (document.getElementById('nocheck').checked) {
+        document.getElementById('ifyes').style.display = 'none';
+    }
+}
+	</script>
+	<form action="." enctype="multipart/form-data"  method="POST">
+		email : <input type="email" name="email" required>
+		<p>Do you want to attach something</p>
+		Yes <input type="radio" name="yesno" value="yes" onclick="javascript:yes1check();" id='yescheck' required>
+		<dir id='ifyes' style='display:none'>
+			<input type="file" name='file'>
+		</dir>
+		No <input type="radio" name="yesno" onclick="javascript:no1check();" id='nocheck' required>
+		<br><br><br>
+		<input type="submit">
+	</form>
+</div>
+    </center>
+</body>
+</html>

@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from pdf_data.views import send_mail_with_attach
+from pdf_data.views import send_mail_with_attach,test
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^test/', send_mail_with_attach),
+    url(r'^test1/', test),
 
 ]

@@ -54,7 +54,7 @@ ROOT_URLCONF = 'pdf_genrator.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,8 +119,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'email_id'
-# EMAIL_HOST_PASSWORD = 'pass'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+
+FILE_UPLOAD_HANDLERS = ("django_excel.ExcelMemoryFileUploadHandler",
+                        "django_excel.TemporaryExcelFileUploadHandler")

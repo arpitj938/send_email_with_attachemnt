@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <title>login</title>
+  <style type="text/css">
+   .login
+   {
+    opacity: 0.6;
+    background-color: white;
+    width: 50%;
+    height: 100%
+
+   }
+  label
+   {
+    font-weight:bold;
+    color: black;
+   }
+   input
+   {
+    font-weight: bold;
+    color: #000000;
+   }
+   body{
+    background-image: url('email-laptop-computer-marketing-ss-1920.jpg');
+    background-repeat: no-repeat;
+    /*background-position: right top;*/
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; 
+   }
+  </style>
+  <script type="text/javascript">
+  function passf()
+  {
+    if(document.getElementById('showpass').checked)
+    {
+      document.getElementById('pass').type='text';
+    }
+    else document.getElementById('pass').type='password';
+  }
+  </script>
+</head>
+<body>
+  <div class ="first">
+    <!-- <image src='arpit.jpg' width='100%' height='auto'> -->
+    <br><br><br><br><br><br><br><br>
+</div>
+<CENTER>
+  <div class="login">
+    <br>
+    <h2 id="login_head" style='color:darkblue'> Enter Your login credential </h2>
+    <div class="login_form">
+      <form action="." enctype="multipart/form-data"  method="POST">
+        <label>Email :
+          <input type="email" required placeholder="someone@example.com"> 
+        </label>
+        <br><br>
+        <label>Password :
+          <input type="password" id="pass" pattern="{8}" required autocomplete='off' placeholder="password" title="8 letter password">
+        </label>
+        <br><br>
+        <label>Show Password :
+          <input type="checkbox" id='showpass' onclick='javascript:passf();'>
+        </label>
+        <br><br>
+          <input type="submit" value="login">
+      </form>
+      <br>
+      <a href="http://www.google.com">sign up </a>
+      <br><br>
+    </div>
+  </div>
+  <div class="poweredby">
+   <br><br><br><br><br><br><br><br><br><br>
+  </div>
+</CENTER>
+</body>
+</html>
